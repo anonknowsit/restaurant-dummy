@@ -11,17 +11,18 @@
 <body>
     <header>
         <nav>
-            <div class="logo">Hoi An</div>
+            <!--<div class="logo">Hoi An</div>-->
+            <div class="logo"><img src="./images/logo.png" alt="logo"></div>
             <!-- Modified nav-group -->
             <div class="nav-group">
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#menu">Speisekarte</a></li>
+                    <li><a href="#about">Über uns</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
                 </ul>
                 <!-- Desktop reservation button -->
-            <a href="#" class="reservation-btn desktop-only">Reservation</a>
+            <a href="#" class="reservation-btn desktop-only">Reservieren</a>
             </div>
             <!-- Burger menu icon -->
             <div class="burger">
@@ -35,44 +36,43 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Savor the Moment</h1>
-                <p>Experience culinary artistry in every bite</p>
-                <a href="#menu" class="cta-button">Explore Our Menu</a>
+                <h1>Hoi An | Vietnamesische Delikatessen</h1>
+                <p>Entdecken Sie die exquisite Vielfalt vietnamesischer Delikatessen in unserem Restaurant, wo frische Zutaten und traditionelle Rezepte auf harmonische Weise zusammenkommen, um Ihnen ein unvergessliches Geschmackserlebnis zu bieten!</p>
+                <a href="#menu" class="cta-button">Speisekarte</a>
             </div>
         </section>
 
         <section id="menu" class="menu">
-            <h2>Our Signature Dishes</h2>
+            <h2>Die Spezialitäten unseres Hauses</h2>
             <div class="menu-grid">
                 <div class="menu-item">
                     <img src="./images/dish-duck-rise.jpg" alt="dish-duck-rise">
-                    <h3>Truffle Infused Risotto</h3>
-                    <p>Creamy Arborio rice with black truffle and Parmigiano-Reggiano</p>
+                    <h3>Chuan Ngot</h3>
+                    <p>Knusprige Ente auf einer fein süß sauren Sauce dazu Reis</p>
                 </div>
                 <div class="menu-item">
                     <img src="./images/drink-lemonade.jpg" alt="drink-lemonade">
-                    <h3>Herb-Crusted Filet Mignon</h3>
-                    <p>Prime beef tenderloin with a crispy herb crust and red wine reduction</p>
+                    <h3>Gingerale Minze Limonade</h3>
+                    <p>Hausgemachte Limonade</p>
                 </div>
                 <div class="menu-item">
                     <img src="./images/dish-tofu-rise.jpg" alt="dish-tofu-rise">
-                    <h3>Pan-Seared Sea Bass</h3>
-                    <p>Fresh sea bass with lemon beurre blanc and seasonal vegetables</p>
+                    <h3>Gericht</h3>
+                    <p>Gericht kurze Beschreibung</p>
                 </div>
                 <div class="menu-item">
                     <img src="./images/side-dishes.jpg" alt="side-dishes">
-                    <h3>Deconstructed Tiramisu</h3>
-                    <p>A modern take on the classic Italian dessert with espresso gelato</p>
+                    <h3>Vorspeisen</h3>
+                    <p>Vorspeisen kurze Beschreibung</p>
                 </div>
             </div>
-            <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" class="view-full-menu" target="_blank" rel="noopener noreferrer">View Full Menu</a>
+            <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" class="view-full-menu" target="_blank" rel="noopener noreferrer">Speisekarte anzeigen</a>
         </section>
 
         <section id="about" class="about">
             <div class="about-content">
-                <h2>Our Story</h2>
-                <p>At Savoria, we believe in the power of exceptional cuisine to create unforgettable moments. Our passionate team of chefs combines innovative techniques with locally-sourced ingredients to craft dishes that excite the palate and nourish the soul.</p>
-                <p>Founded in 2010, Savoria has grown from a small family-owned bistro to a culinary destination, all while maintaining our commitment to sustainability and supporting local producers.</p>
+                <h2>Über uns</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </div>
             <div class="about-image">
                 <img src="./images/restaurant-interior.jpg" alt="restaurant-interior">
@@ -80,29 +80,29 @@
         </section>
 
         <section id="contact" class="contact">
-            <h2>Get in Touch</h2>
+            <h2>Kontakt</h2>
             <div class="contact-container">
                 <form id="contact-form">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
                     <select name="reason" required>
-                        <option value="" disabled selected>Reason for Contact</option>
-                        <option value="reservation">Make a Reservation</option>
-                        <option value="inquiry">General Inquiry</option>
+                        <option value="" disabled selected>Grund der Kontaktaufnahme</option>
+                        <option value="reservation">Reservierung</option>
+                        <option value="inquiry">Allgemeine Frage</option>
                         <option value="feedback">Feedback</option>
                     </select>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
+                    <textarea name="message" placeholder="Nachricht" required></textarea>
+                    <button type="submit">Nachricht senden</button>
                 </form>
                 <div class="contact-info">
-                    <h3>Visit Us</h3>
+                    <h3>Besucht uns</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Marktpl. 2, 55283 Nierstein, Germany</p>
-                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                    <p><i class="fas fa-envelope"></i> info@savoria.com</p>
-                    <h3>Hours</h3>
-                    <p>Monday - Thursday: 5:00 PM - 10:00 PM</p>
-                    <p>Friday - Saturday: 5:00 PM - 11:00 PM</p>
-                    <p>Sunday: 4:00 PM - 9:00 PM</p>
+                    <p><i class="fas fa-phone"></i> 1234567890</p>
+                    <p><i class="fas fa-envelope"></i> dummy@email.de</p>
+                    <h3>Öffnungszeiten</h3>
+                    <p>Mittwoch - Montag: <b>11:30 Uhr</b> - <b>14:00 Uhr</b>, <b>17:30 Uhr </b>- <b>22:00 Uhr</b></p>
+                    <p>Dienstag: <b>Ruhetag</b></p>
+      
                 </div>
             </div>
             <div class="map-container">
