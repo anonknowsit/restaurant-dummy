@@ -4,32 +4,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.nav-group');
     const navLinks = document.querySelectorAll('.nav-links li');
 
-    const navSlide = () => {
-        burger.addEventListener('click', () => {
-            // Toggle Nav
-            nav.classList.toggle('nav-active');
+    burger.addEventListener('click', () => {
+        // Toggle Nav
+        nav.classList.toggle('nav-active');
 
-            // Animate Links
-            navLinks.forEach((link, index) => {
-                if (link.style.animation) {
-                    link.style.animation = '';
-                } else {
-                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-                }
-            });
-
-            // Burger Animation
-            burger.classList.toggle('toggle');
+        // Animate Links
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+            }
         });
-    };
 
-    navSlide();
+        // Burger Animation
+        burger.classList.toggle('toggle');
+    });
 
-    // Close mobile menu when a link is clicked
-    navLinks.forEach(link => {
+     // Close mobile menu when a link is clicked
+     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             nav.classList.remove('nav-active');
             burger.classList.remove('toggle');
+            
+            // Reset animations
+            navLinks.forEach(link => {
+                link.style.animation = '';
+            });
         });
     });
 

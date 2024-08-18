@@ -406,55 +406,48 @@ footer {
 }
 
 /* Responsive design */
+/* New styles for mobile menu */
 @media screen and (max-width: 768px) {
+  .nav-group {
+    position: fixed;
+    right: -100%;
+    top: 70px; /* Adjust based on your header height */
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    transition: right 0.5s ease;
+  }
+
+  .nav-active {
+    right: 0;
+  }
+
   .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    background-color: rgba(255, 255, 255, 0.95);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 50%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
+    align-items: center; /* Center items horizontally */
+    width: 100%;
+    padding: 0;
   }
 
   .nav-links li {
+    margin: 1rem 0;
     opacity: 0;
   }
 
   .burger {
     display: block;
+    cursor: pointer;
   }
 
-  .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px;
-    transition: all 0.3s ease;
+  .desktop-only {
+    display: none;
   }
 
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-
-  .toggle .line2 {
-    opacity: 0;
-  }
-
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-
-  .nav-active {
-    transform: translateX(0%);
-  }
-
-  .nav-group {
-    display: none; /* Hide nav-group on mobile */
+  .mobile-only {
+    display: block;
   }
 
   .about {
@@ -464,37 +457,37 @@ footer {
   .about-content {
     padding-right: 0;
     margin-bottom: 2rem;
+    order: 1; /* Ensure content comes first on mobile */
   }
 
-  .contact-container {
-    flex-direction: column;
-  }
-
-  #contact-form {
-    margin-right: 0;
-    margin-bottom: 2rem;
-  }
-
-  .reservation-btn {
-    display: none; /* Hide the original button on mobile */
-  }
-
-  .mobile-reservation {
-    text-align: center;
-    padding: 1rem 0;
-  }
-
-  .mobile-reservation .reservation-btn {
-    display: inline-block; /* Show the button in the mobile menu */
-  }
-
-  .nav-active .nav-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .about-image {
+    order: 2; /* Image comes after content on mobile */
   }
 }
 
+/* Burger menu icon styles */
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Burger menu animation */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Animation for nav links */
 @keyframes navLinkFade {
   from {
     opacity: 0;
