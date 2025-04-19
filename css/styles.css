@@ -19,6 +19,7 @@ nav {
   align-items: center;
   padding: 1rem 5%;
   background-color: rgba(255, 255, 255);
+  /*background-color: rgb(92, 92, 92);*/
   position: fixed;
   width: 100%;
   top: 0;
@@ -38,7 +39,7 @@ nav {
 }
 
 .logo img {
-  height: 67px; /* Adjust this value to increase the logo size */
+  height: 87px; /* Adjust this value to increase the logo size */
   width: auto; /* Maintain aspect ratio */
   max-width: none; /* Allow the image to exceed its container size */
   max-height: none;
