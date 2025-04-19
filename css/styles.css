@@ -17,7 +17,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 0.5rem 5%;
   background-color: rgba(255, 255, 255);
   /*background-color: rgb(92, 92, 92);*/
   position: fixed;
@@ -26,12 +26,6 @@ nav {
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-/*Without image just font*/
-/*.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #2c3e50;
-}*/
 
 .logo {
   display: flex;
@@ -39,7 +33,7 @@ nav {
 }
 
 .logo img {
-  height: 87px; /* Adjust this value to increase the logo size */
+  height: 85px; /* Adjust this value to increase the logo size */
   width: auto; /* Maintain aspect ratio */
   max-width: none; /* Allow the image to exceed its container size */
   max-height: none;
@@ -110,7 +104,7 @@ nav {
 .hero {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
-    url("../images/lamps-interieur.jpg");
+    url("../images/restaurant/lamps-interieur.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -332,10 +326,110 @@ nav {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Hoi-An images section styles */
+.hoian {
+  padding: 6rem 5%;
+  background-color: #fff;
+}
+
+.hoian h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.hoian-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/*.hoian-item {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 30rem;
+}*/
+
+/*.hoian-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}*/
+
+.hoian-item {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 800px;
+  height: 30rem;
+  max-height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hoian-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .hoian-item {
+    height: 16rem;
+    max-width: 100%;
+  }
+}
+
+
+.hoian-item h3,
+.hoian-item p,
+.hoian-item .price {
+  padding: 0.5rem 1rem;
+}
+
+.hoian-item h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.view-full-hoian {
+  display: inline-block;
+  text-align: center;
+  margin-top: 3rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #e74c3c;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-full-hoian:hover {
+  background-color: #c0392b;
+  transform: translateY(-3px);
+}
+
+/* Add this style to ensure the link is centered */
+.hoian {
+  text-align: center; /* Center all text in the hoi-an section */
+}
+
+
 /* Contact section styles */
 .contact {
   padding: 6rem 5%;
-  background-color: #fff;
+  background-color: #f9f9f9;
 }
 
 .contact h2 {
@@ -598,7 +692,68 @@ footer {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
+/* Slider Pictures */
+* {box-sizing:border-box}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
