@@ -203,11 +203,12 @@ nav {
   display: inline-block;
   text-align: center;
   margin-top: 3rem;
-  padding: 0.8rem 1.5rem;
+  padding: 1.8rem 3.0rem;
   background-color: #e74c3c;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+  font-size:x-large;
   border-radius: 50px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
