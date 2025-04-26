@@ -200,7 +200,7 @@
                     <h3>Besucht uns</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Marktpl. 2, 55283 Nierstein, Germany</p>
                     <p><i class="fas fa-phone"></i><a href="tel:01759500450" class="phone-link">0175/9500450</a></p>
-                    <p><i class="fas fa-envelope"></i><a href="mailto:example@example.com" class="email-link">example@example.com</a></p>
+                    <p><i class="fas fa-envelope"></i><a href="mailto:info@hoian-nierstein.de" class="email-link">info@hoian-nierstein.de</a></p>
                     <h3>Öffnungszeiten</h3>
                     <p>MO, DI, DO & SO: 11.30 - 14.00 & 17.30</p>
                     <p>FR & SA 17.00-22.00</p>
@@ -253,6 +253,24 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $to = "info@hoian-nierstein.de";
+    $name = strip_tags($_POST['name']);
+    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $message = strip_tags($_POST['message']);
+    $subject = "New Feedback from Website";
 
+    $body = "Name: $name\nEmail: $email\nMessage:\n$message";
+
+    $headers = "From: $email\r\nReply-To: $email\r\n";
+
+    if ($email && mail($to, $subject, $body, $headers)) {
+        echo "Thank you for your feedback!";
+    } else {
+        echo "There was a problem sending your feedback. Please try again.";
+    }
+}
+?>
 </body>
 </html>
