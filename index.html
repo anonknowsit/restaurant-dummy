@@ -253,24 +253,6 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "info@hoian-nierstein.de";
-    $name = strip_tags($_POST['name']);
-    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    $message = strip_tags($_POST['message']);
-    $subject = "New Feedback from Website";
 
-    $body = "Name: $name\nEmail: $email\nMessage:\n$message";
-
-    $headers = "From: $email\r\nReply-To: $email\r\n";
-
-    if ($email && mail($to, $subject, $body, $headers)) {
-        echo "Thank you for your feedback!";
-    } else {
-        echo "There was a problem sending your feedback. Please try again.";
-    }
-}
-?>
 </body>
 </html>
