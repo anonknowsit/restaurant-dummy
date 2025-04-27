@@ -12,6 +12,13 @@ body {
   background-color: #f9f9f9;
 }
 
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
 /* Navigation styles */
 nav {
   display: flex;
@@ -25,6 +32,15 @@ nav {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-bottom a:hover {
+  color: #e74c3c;
 }
 
 .logo {
@@ -85,7 +101,7 @@ nav {
   padding: 0.5rem 1rem;
   border-radius: 50px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -345,21 +361,6 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
-
-/*.hoian-item {
-  background-color: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  height: 30rem;
-}*/
-
-/*.hoian-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}*/
 
 .hoian-item {
   background-color: #fff;
@@ -777,4 +778,68 @@ footer {
 
 html {
   scroll-behavior: smooth;
+}
+
+ /* impressum styles */
+ #impressum {
+  padding: 6rem 5%;
+  background-color: #f9f9f9;
+}
+
+#impressum p {
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.impressum h1 {
+  font-size: 2.5rem;
+  margin-bottom: 6rem;
+  font-weight: 700;
+}
+
+/* datenschutz styles */
+#datenschutz {
+  padding: 6rem 5%;
+  background-color: #f9f9f9;
+}
+
+#datenschutz p {
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.datenschutz h1 {
+  font-size: 2.5rem;
+  margin-bottom: 6rem;
+  font-weight: 700;
+}
+
+
+.creator-btn {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%);
+  padding: 0.8rem 2.2rem;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.15);
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  letter-spacing: 0.03em;
+  margin: 1rem 0;
+}
+
+.creator-btn:hover,
+.creator-btn:focus {
+  background: linear-gradient(90deg, #c0392b 0%, #e74c3c 100%);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(231, 76, 60, 0.22);
+  color: #fff;
+  outline: none;
 }

@@ -116,3 +116,4 @@ window.onload = function() {
   showSlides(slideIndex);
   slideTimer = setTimeout(nextSlide, 6000);
 };
+
